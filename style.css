@@ -1,0 +1,265 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+@font-face {
+	font-family: charlieUltra;
+	src: url(fonts/charlie-display-ultra.ttf);
+}
+
+
+@font-face {
+	font-family: Bebas;
+	src: url(fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+}
+
+.container {
+	width: 1355px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.center {
+    width: 50%;
+	height: 50%;
+}
+
+.title {
+	color: #f84545;
+	font-size: 120px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.main_title {
+    color: #fff;
+    font-size: 26px;
+    font-family: charlieUltra;
+	line-height: 90px;
+    margin-top: 50px;
+}
+
+section.slider {
+    padding: 10px 0;
+    background-image: url(./img/fundo.jpg);
+    height: 100vh;
+    position: relative;
+   
+}
+
+section.slider .title {
+    font-size: 70px;
+    position: relative;
+    
+}
+
+.slider-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+	margin-bottom: 50px;
+}
+
+.slide_content {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 30px 0 30px;
+    text-align: center;
+}
+
+button.slider__button {
+	background: #f84545;
+    border: 3px solid #f84545;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #0e0e16;
+    opacity: 1 !important;
+    border-radius: 10px;
+}
+
+button.slider__button:hover {
+    border: 3px solid #f84545;
+    background: transparent;
+    color: #f84545;
+}
+
+
+.slide_content p {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background-color: rgba(0,0,0,0.75);
+ overflow: hidden;
+ width: 100%;
+ height: 0;
+ transition: .5s ease;
+}
+hover .slide_content p{
+    height: 100%;
+}
+
+.slider .btns {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.slider .btns button {
+    height: 48px;
+    width: 150px;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    background: none;
+    font-family: charlieUltra;
+    border: 3px solid #f84545;
+    color: #f84545;
+	letter-spacing: 1px;
+}
+
+.slider .btns button:hover {
+    background: #f84545;
+    border: 3px solid #f84545;
+    color: #0e0e16;
+}
+.btns a{
+    text-decoration: none;
+    color:  white
+}
+
+.slide:hover {
+    border: 3px solid #f84545;
+}
+
+.slider {
+  --slider-padding: 1rem;
+  --slider-column-gap: 1rem;
+  --slide-width: 20%;
+  --slide-min-width: 15rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__track {
+  display: flex;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  padding-inline: var(--slider-padding);
+  scroll-behavior: smooth;
+  list-style-type: none;
+  padding: 0;
+  margin-right: calc(--var(slider-column-gap) * -1);
+  scrollbar-width: none;
+}
+
+.slider__track > * {
+  flex: 0 0 var(--slide-width);
+  min-width: var(--slide-min-width);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding-right: var(--slider-column-gap);
+}
+
+.slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider__buttons {
+  
+  margin-right: 35px;
+}
+
+.slider__buttons [disabled] {
+  opacity: 0.5;
+}
+
+.slide {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border: 3px solid #383c4e;
+    border-radius: 10px;
+    padding: 3px;
+    backdrop-filter: blur(15px);
+}
+
+.slideimg {
+	 width: 100%;
+	 border-radius: 10px;
+     
+}
+
+
+@media (max-width: 1400px){
+	.container {
+		width: 90%;
+	}
+}
+
+@media (min-width: 1200px){
+	.menu ul {
+		display: flex;
+		justify-content: center;
+	}
+	.mob-icons {
+		display: none;
+	}
+}
+
+@media (max-width: 769px) {
+	.main_title {
+		font-size: 60px;
+		line-height: 60px;
+	}
+	.title {
+		font-size: 150px;
+	}
+}
+
+@media (max-width: 600px) {
+	.title {
+		font-size: 40px;
+	}
+	.main_title {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	section.slider .title {
+		font-size: 40px;
+	}
+	button.slider__button {
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+	}
+    .slider .btns button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 426px) {
+	.main_title {
+		font-size: 35px;
+		line-height: 35px;
+	}
+	section.slider .title {
+		font-size: 30px;
+		top: 10px;
+	}
+}
